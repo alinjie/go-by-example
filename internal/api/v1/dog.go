@@ -53,7 +53,8 @@ func (h DogHandler) HandleGetDog(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
-		w.Write([]byte("Parameter 'id' must be a valid integer."))
+		w.Write([]byte(errInvalidIdParam))
+		return
 	}
 
 	dog, err := h.storage.GetDog(id)

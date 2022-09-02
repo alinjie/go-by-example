@@ -12,6 +12,7 @@ type Storage interface {
 
 const (
 	errInternalServerError = `{"error": "Internal server error"}`
+	errInvalidIdParam      = `{"error": "Parameter 'id' must be a valid integer."}`
 )
 
 func Server(s Storage) chi.Router {
