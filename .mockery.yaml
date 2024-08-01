@@ -1,0 +1,8 @@
+all: True
+dir: internal/mocks
+filename: "{{.InterfaceName}}.go"
+outpkg: mocks
+packages:
+  github.com/alinjie/go-by-example/internal/api/v1:
+    config:
+      recursive: True
